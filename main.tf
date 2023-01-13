@@ -10,6 +10,7 @@ resource "aws_instance" "hello-tf-instance" {
   count = var.hello_tf_instance_count
   instance_type = var.hello_tf_instance_type
   tags = {
-    owner = "me"
+    owner = "me",
+    ttl = "100"
   }
 }
